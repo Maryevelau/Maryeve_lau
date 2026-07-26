@@ -150,6 +150,7 @@
   .cb-whatsapp { background: #25D366; color: #06301c; }
   .cb-linkedin { background: #ffffff; color: #0a1628; }
   .cb-instagram { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #ffffff; }
+  .cb-wechat { background: #07C160; color: #ffffff; border: none; font-family: inherit; cursor: pointer; }
 
   footer { background: var(--navy-dark); color: rgba(255,255,255,0.55); font-size: 12px; text-align: center; padding: 24px 0; }
   footer a { color: rgba(255,255,255,0.75); }
@@ -315,6 +316,7 @@
     <p data-i18n="contactP">Reach out directly, I respond fast.</p>
     <div class="contact-buttons">
       <a class="cb-whatsapp" id="waContact" href="#" target="_blank" rel="noopener" data-i18n="cbWhatsapp">WhatsApp Me</a>
+      <button type="button" class="cb-wechat" id="wechatBtn"><span data-i18n="cbWechatLabel">WeChat</span>: wxid_61jgg9aof2s822</button>
       <a class="cb-linkedin" href="https://www.linkedin.com/in/mary-eve-lau/" target="_blank" rel="noopener" data-i18n="cbLinkedin">LinkedIn</a>
       <a class="cb-instagram" href="https://www.instagram.com/maryeve_lau/" target="_blank" rel="noopener" data-i18n="cbInstagram">Instagram</a>
     </div>
@@ -364,6 +366,9 @@ const i18n = {
     cardSize: "Size", cardRate: "Rate", cardGross: "Monthly", enquire: "Enquire on WhatsApp",
     contactH2: "Let's find your next office", contactP: "Reach out directly, I respond fast.",
     cbWhatsapp: "WhatsApp Me", cbLinkedin: "LinkedIn", cbInstagram: "Instagram",
+    cbWechatLabel: "WeChat",
+    wechatCopied: "WeChat ID copied: wxid_61jgg9aof2s822\n\nOpen WeChat > tap the \"+\" icon > Add Friends > paste to search.",
+    wechatFallback: "My WeChat ID: wxid_61jgg9aof2s822",
     footerText: "© 2026 Mary Eve Lau · Senior Property Consultant, Citi Commercial",
     footerRights: "All property listing details on this site are proprietary and may not be copied, scraped, or reproduced without permission.",
     waHeroText: "Hi Mary, I'd like to know more about fitted office space options in the CBD.",
@@ -399,6 +404,9 @@ const i18n = {
     cardSize: "面积", cardRate: "租金单价", cardGross: "月租金", enquire: "WhatsApp 咨询",
     contactH2: "为您寻找理想办公空间", contactP: "欢迎直接联系我，我会尽快回复。",
     cbWhatsapp: "WhatsApp 联系", cbLinkedin: "领英 LinkedIn", cbInstagram: "Instagram",
+    cbWechatLabel: "微信",
+    wechatCopied: "微信号已复制：wxid_61jgg9aof2s822\n\n请打开微信 > 点击右上角「+」 > 添加朋友 > 粘贴搜索。",
+    wechatFallback: "我的微信号：wxid_61jgg9aof2s822",
     footerText: "© 2026 Mary Eve Lau · Citi Commercial 高级物业顾问",
     footerRights: "本网站所有房源信息均为专有内容，未经许可不得复制、抓取或转载。",
     waHeroText: "你好 Mary，我想了解中央商务区装修办公室的选择。",
@@ -434,6 +442,19 @@ function applyStaticText() {
 
 document.getElementById("langEn").addEventListener("click", () => { lang = "en"; applyStaticText(); renderDistricts(); renderListings(); });
 document.getElementById("langZh").addEventListener("click", () => { lang = "zh"; applyStaticText(); renderDistricts(); renderListings(); });
+
+const WECHAT_ID = "wxid_61jgg9aof2s822";
+document.getElementById("wechatBtn").addEventListener("click", () => {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(WECHAT_ID).then(() => {
+      alert(t("wechatCopied"));
+    }).catch(() => {
+      alert(t("wechatFallback"));
+    });
+  } else {
+    alert(t("wechatFallback"));
+  }
+});
 
 function renderDistricts() {
   const sel = document.getElementById("district");
