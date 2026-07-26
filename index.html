@@ -152,6 +152,13 @@
   .cb-instagram { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #ffffff; }
   .cb-wechat { background: #07C160; color: #ffffff; border: none; font-family: inherit; cursor: pointer; }
 
+  .wechat-modal { position: fixed; inset: 0; z-index: 100; background: rgba(10,22,40,0.65); display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .wechat-modal-inner { background: var(--white); border-radius: 12px; padding: 28px 24px 24px; max-width: 320px; width: 100%; text-align: center; position: relative; }
+  .wechat-modal-inner img { width: 100%; max-width: 240px; height: auto; border-radius: 8px; margin: 0 auto 16px; display: block; }
+  .wechat-modal-inner p { margin: 0; color: var(--text); font-size: 14px; }
+  .wechat-id-fallback { margin-top: 8px !important; color: var(--text-muted) !important; font-size: 12px !important; font-family: monospace; }
+  .wechat-modal-close { position: absolute; top: 10px; right: 14px; background: none; border: none; font-size: 22px; line-height: 1; color: var(--text-muted); cursor: pointer; padding: 4px; }
+
   footer { background: var(--navy-dark); color: rgba(255,255,255,0.55); font-size: 12px; text-align: center; padding: 24px 0; }
   footer a { color: rgba(255,255,255,0.75); }
   .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
@@ -323,6 +330,15 @@
   </div>
 </section>
 
+<div class="wechat-modal hidden" id="wechatModal">
+  <div class="wechat-modal-inner">
+    <button type="button" class="wechat-modal-close" id="wechatModalClose" aria-label="Close">&times;</button>
+    <img src="images/wechat-qr.jpg" alt="Mary Lau WeChat QR code" />
+    <p data-i18n="wechatScanCaption">Scan to add me on WeChat</p>
+    <p class="wechat-id-fallback">wxid_61jgg9aof2s822</p>
+  </div>
+</div>
+
 <footer>
   <div class="wrap footer-inner">
     <img class="footer-logo" src="images/citicommercial-logo-white.png" alt="Citi Commercial logo" />
@@ -369,6 +385,7 @@ const i18n = {
     cbWechatLabel: "WeChat",
     wechatCopied: "WeChat ID copied: wxid_61jgg9aof2s822\n\nOpen WeChat > tap the \"+\" icon > Add Friends > paste to search.",
     wechatFallback: "My WeChat ID: wxid_61jgg9aof2s822",
+    wechatScanCaption: "Scan to add me on WeChat",
     footerText: "© 2026 Mary Eve Lau · Senior Property Consultant, Citi Commercial",
     footerRights: "All property listing details on this site are proprietary and may not be copied, scraped, or reproduced without permission.",
     waHeroText: "Hi Mary, I'd like to know more about fitted office space options in the CBD.",
@@ -407,6 +424,7 @@ const i18n = {
     cbWechatLabel: "微信",
     wechatCopied: "微信号已复制：wxid_61jgg9aof2s822\n\n请打开微信 > 点击右上角「+」 > 添加朋友 > 粘贴搜索。",
     wechatFallback: "我的微信号：wxid_61jgg9aof2s822",
+    wechatScanCaption: "扫码添加我的微信",
     footerText: "© 2026 Mary Eve Lau · Citi Commercial 高级物业顾问",
     footerRights: "本网站所有房源信息均为专有内容，未经许可不得复制、抓取或转载。",
     waHeroText: "你好 Mary，我想了解中央商务区装修办公室的选择。",
@@ -444,16 +462,18 @@ document.getElementById("langEn").addEventListener("click", () => { lang = "en";
 document.getElementById("langZh").addEventListener("click", () => { lang = "zh"; applyStaticText(); renderDistricts(); renderListings(); });
 
 const WECHAT_ID = "wxid_61jgg9aof2s822";
+const wechatModal = document.getElementById("wechatModal");
 document.getElementById("wechatBtn").addEventListener("click", () => {
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(WECHAT_ID).then(() => {
-      alert(t("wechatCopied"));
-    }).catch(() => {
-      alert(t("wechatFallback"));
-    });
-  } else {
-    alert(t("wechatFallback"));
+    navigator.clipboard.writeText(WECHAT_ID).catch(() => {});
   }
+  wechatModal.classList.remove("hidden");
+});
+document.getElementById("wechatModalClose").addEventListener("click", () => {
+  wechatModal.classList.add("hidden");
+});
+wechatModal.addEventListener("click", (e) => {
+  if (e.target === wechatModal) wechatModal.classList.add("hidden");
 });
 
 function renderDistricts() {
