@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mary Eve Lau | Senior Property Consultant, Citi Commercial</title>
+<meta name="description" content="Mary Eve Lau, Senior Property Consultant at Citi Commercial, specialising in fitted CBD office space in Singapore." />
+<style>
+  :root {
+    --navy: #10213f;
+    --navy-dark: #0a1628;
+    --gold: #b8935a;
+    --gold-light: #e8d9c3;
+    --bg: #f8f7f4;
+    --text: #1c1c1c;
+    --text-muted: #5a5f6b;
+    --border: #e3e0d8;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; margin: 0; }
+  a { text-decoration: none; color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 500px) { .wrap { padding: 0 36px; } }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--navy); color: var(--white);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand-group { display: flex; align-items: center; gap: 14px; }
+  .brand { font-family: Georgia, serif; font-size: 20px; letter-spacing: 0.5px; }
+  .brand small { display: block; font-family: -apple-system, sans-serif; font-size: 11px; letter-spacing: 1px; color: var(--gold-light); text-transform: uppercase; margin-top: 2px; }
+  .logo-chip { display: none; }
+  .logo-chip img { display: block; height: 42px; width: auto; }
+  @media (min-width: 500px) { .logo-chip { display: block; } }
+  .nav-links { display: none; gap: 28px; align-items: center; font-size: 14px; }
+  .nav-links a { opacity: 0.85; }
+  .nav-links a:hover { opacity: 1; }
+  .lang-toggle { display: flex; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; overflow: hidden; font-size: 12px; }
+  .lang-toggle button { background: none; border: none; color: var(--white); padding: 6px 14px; cursor: pointer; opacity: 0.7; }
+  .lang-toggle button.active { background: var(--gold); color: var(--navy-dark); opacity: 1; font-weight: 600; }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .btn-wa-nav { display: none; background: var(--gold); color: var(--navy-dark); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+  @media (min-width: 760px) {
+    .nav-links { display: flex; }
+    .btn-wa-nav { display: inline-block; }
+  }
+
+  .hero { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%); color: var(--white); padding: 56px 0 0; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: end; }
+  .hero-copy { padding-bottom: 48px; }
+  .eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+  .hero h1 { font-size: 30px; line-height: 1.25; max-width: 560px; margin-bottom: 18px; }
+  .hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 480px; margin-bottom: 28px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-photo-wrap { display: flex; justify-content: center; }
+  .hero-photo-wrap img { width: 100%; max-width: 380px; height: auto; border-radius: 12px 12px 0 0; display: block; box-shadow: 0 -20px 50px rgba(0,0,0,0.25); }
+  @media (min-width: 760px) {
+    .hero h1 { font-size: 40px; }
+    .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 32px; }
+    .hero-photo-wrap { justify-content: flex-end; }
+    .hero-photo-wrap img { max-width: 420px; }
+  }
+  .btn { display: inline-block; padding: 13px 26px; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: opacity 0.15s; }
+  .btn:hover { opacity: 0.88; }
+  .btn-primary { background: var(--gold); color: var(--navy-dark); }
+  .btn-outline { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
+  section { padding: 64px 0; }
+  .section-head { max-width: 640px; margin-bottom: 40px; }
+  .section-eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+  .section-head h2 { font-size: 28px; margin-bottom: 12px; }
+  .section-head p { color: var(--text-muted); font-size: 15px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+  .avatar-img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold-light); }
+  .about-text p { color: var(--text-muted); font-size: 15px; margin-bottom: 14px; }
+  .client-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .client-chips span { font-size: 12px; background: var(--gold-light); color: var(--navy); padding: 5px 12px; border-radius: 20px; font-weight: 600; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+  .stat { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 14px; text-align: center; }
+  .stat .num { font-family: Georgia, serif; font-size: 24px; color: var(--navy); }
+  .stat .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+  @media (min-width: 760px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .cards-3 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 700px) { .cards-3 { grid-template-columns: repeat(3, 1fr); } }
+  .value-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 26px 22px; }
+  .value-card .icon { width: 40px; height: 40px; border-radius: 8px; background: var(--gold-light); color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; font-weight: 600; }
+  .value-card h3 { font-size: 17px; margin-bottom: 8px; }
+  .value-card p { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+  .properties { background: var(--white); }
+  .filters { display: flex; flex-wrap: wrap; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+  .filters input[type=text] { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+  .search-full { flex-basis: 100%; }
+  .field-group { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--text-muted); }
+  .field-group select, .field-group input[type=number] { padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; width: 130px; }
+  .range-pair { display: flex; align-items: center; gap: 6px; }
+  .range-pair input { width: 70px !important; }
+
+  #resultCount { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+  .listing-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 640px) { .listing-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 980px) { .listing-grid { grid-template-columns: repeat(3, 1fr); } }
+  .listing-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px; background: var(--white); display: flex; flex-direction: column; gap: 8px; }
+  .listing-card .badge { display: inline-block; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; background: var(--gold-light); color: var(--navy); padding: 3px 8px; border-radius: 4px; align-self: flex-start; }
+  .listing-card h4 { font-size: 16px; margin: 4px 0 0; font-family: Georgia, serif; }
+  .listing-card .addr { font-size: 12px; color: var(--text-muted); }
+  .listing-card .specs { display: flex; justify-content: space-between; font-size: 13px; margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .listing-card .specs div span { display: block; color: var(--text-muted); font-size: 11px; }
+  .listing-card .enquire { margin-top: 10px; text-align: center; background: var(--navy); color: var(--white); padding: 9px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+  .listing-card .enquire:hover { background: var(--navy-dark); }
+
+  .load-more-wrap { text-align: center; margin-top: 28px; }
+  .btn-load { background: var(--white); border: 1px solid var(--navy); color: var(--navy); padding: 11px 28px; border-radius: 24px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .btn-load:hover { background: var(--navy); color: var(--white); }
+
+  .quote-band { background: var(--navy-dark); color: var(--white); padding: 0; }
+  .quote-grid { display: grid; grid-template-columns: 1fr; }
+  .quote-photo img { width: 100%; height: 260px; object-fit: cover; object-position: top center; display: block; }
+  .quote-text { padding: 40px 24px; display: flex; flex-direction: column; justify-content: center; }
+  .quote-text blockquote { font-family: Georgia, serif; font-size: 20px; line-height: 1.5; margin: 0 0 14px; font-style: italic; }
+  .quote-text cite { font-size: 13px; color: var(--gold-light); font-style: normal; }
+  @media (min-width: 760px) {
+    .quote-grid { grid-template-columns: 1fr 1.3fr; }
+    .quote-photo img { height: 100%; min-height: 280px; }
+    .quote-text { padding: 40px 56px; }
+    .quote-text blockquote { font-size: 24px; }
+  }
+
+  .contact { background: var(--navy); color: var(--white); text-align: center; }
+  .contact h2 { font-size: 28px; margin-bottom: 12px; }
+  .contact p { color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
+  .contact-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+  .contact-buttons a { display: flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; }
+  .cb-whatsapp { background: #25D366; color: #06301c; }
+  .cb-linkedin { background: #ffffff; color: #0a1628; }
+  .cb-instagram { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #ffffff; }
+
+  footer { background: var(--navy-dark); color: rgba(255,255,255,0.55); font-size: 12px; text-align: center; padding: 24px 0; }
+  footer a { color: rgba(255,255,255,0.75); }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .footer-logo { height: 22px; width: auto; opacity: 0.9; }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand-group">
+      <div class="brand">Mary Eve Lau<small data-i18n="navTitle">Senior Property Consultant</small></div>
+      <div class="logo-chip"><img src="images/citicommercial-logo-white.png" alt="Citi Commercial logo" /></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#properties" data-i18n="navProperties">Properties</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="langEn" class="active">EN</button>
+        <button id="langZh">中文</button>
+      </div>
+      <a class="btn-wa-nav" id="waNav" href="#" target="_blank" rel="noopener" data-i18n="navWhatsapp">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow" data-i18n="heroEyebrow">Singapore CBD Office Leasing</div>
+      <h1 data-i18n="heroH1">Office space that's ready to work, the day you move in.</h1>
+      <p data-i18n="heroSub">I help growing and overseas companies find fitted offices in Singapore, so they can save renovation capex, move in faster, and lease with confidence.</p>
+      <div class="cta-row">
+        <a href="#properties" class="btn btn-primary" data-i18n="heroCta1">Browse Available Space</a>
+        <a href="#" id="waHero" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="heroCta2">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/hero.jpg" alt="Mary Eve Lau, Senior Property Consultant, with the Singapore CBD skyline" />
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <img class="avatar-img" src="images/headshot.jpg" alt="Mary Eve Lau headshot" />
+      <div class="section-eyebrow" data-i18n="aboutEyebrow">About Mary</div>
+      <h2 data-i18n="aboutH2" style="font-size:26px; margin-bottom:16px;">More than listings — a clearer way to lease.</h2>
+      <div class="about-text">
+        <p data-i18n="aboutP1">With 17 years of experience in real estate, I understand that choosing an office is more than just comparing rental rates or browsing listings. The right office can support business growth, improve team productivity, strengthen company image, and reduce unnecessary setup costs.</p>
+        <p data-i18n="aboutP2">My focus is on fitted and ready-to-move-in office spaces, especially for companies that want to avoid heavy renovation costs and shorten their setup timeline.</p>
+        <p data-i18n="aboutP3">Whether you are setting up your first Singapore office, expanding into a larger space, or moving out of a serviced office, I can help you shortlist suitable fitted office options and make a more confident decision.</p>
+      </div>
+      <div class="client-chips">
+        <span data-i18n="chip1">Growth-stage businesses</span>
+        <span data-i18n="chip2">Foreign entrants</span>
+        <span data-i18n="chip3">Regional offices</span>
+        <span data-i18n="chip4">SMEs</span>
+        <span data-i18n="chip5">Professional firms</span>
+      </div>
+    </div>
+    <div>
+      <div class="stats">
+        <div class="stat"><div class="num">17+</div><div class="label" data-i18n="statYears">Years in Real Estate</div></div>
+        <div class="stat"><div class="num">450+</div><div class="label" data-i18n="statListings">Live Listings</div></div>
+        <div class="stat"><div class="num">1:1</div><div class="label" data-i18n="statService">Dedicated Service</div></div>
+      </div>
+      <div class="cards-3" style="grid-template-columns:1fr; margin-top:20px;">
+        <div class="value-card">
+          <div class="icon">01</div>
+          <h3 data-i18n="val1h">Fitted, ready-to-move-in space</h3>
+          <p data-i18n="val1p">Priority access to move-in-ready units, so you avoid heavy renovation costs and shorten your setup timeline.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">02</div>
+          <h3 data-i18n="val2h">Built for growing and overseas teams</h3>
+          <p data-i18n="val2p">Practical, clear guidance for growth-stage businesses, foreign entrants, regional offices, SMEs and professional firms setting up in Singapore.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">03</div>
+          <h3 data-i18n="val3h">Advice beyond the listing</h3>
+          <p data-i18n="val3p">Comparing locations, layouts, lease terms, total occupancy cost, move-in timelines and reinstatement, so the process is clearer, faster and less stressful.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-band">
+  <div class="quote-grid">
+    <div class="quote-photo">
+      <img src="images/office.jpg" alt="Mary Eve Lau in a Singapore CBD office" />
+    </div>
+    <div class="quote-text">
+      <blockquote data-i18n="quoteText">"I don't just show you space. I find you space that's ready to work."</blockquote>
+      <cite data-i18n="quoteCite">Mary Eve Lau, Senior Property Consultant</cite>
+    </div>
+  </div>
+</section>
+
+<section id="properties" class="properties">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="propEyebrow">Live Listings</div>
+      <h2 data-i18n="propH2">Explore available office space</h2>
+      <p data-i18n="propSub">Search and filter listings across Singapore's CBD.</p>
+    </div>
+
+    <div class="filters">
+      <div class="search-full">
+        <input type="text" id="q" data-i18n-placeholder="searchPlaceholder" placeholder="Search by property name or address" />
+      </div>
+      <div class="field-group">
+        <label data-i18n="labelDistrict">District</label>
+        <select id="district"></select>
+      </div>
+      <div class="field-group">
+        <label data-i18n="labelSize">Size (sqft)</label>
+        <div class="range-pair">
+          <input type="number" id="sizeMin" placeholder="Min" />
+          <span>–</span>
+          <input type="number" id="sizeMax" placeholder="Max" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label data-i18n="labelPrice">Price ($/sqft)</label>
+        <div class="range-pair">
+          <input type="number" id="priceMin" placeholder="Min" />
+          <span>–</span>
+          <input type="number" id="priceMax" placeholder="Max" />
+        </div>
+      </div>
+      <div class="field-group">
+        <label data-i18n="labelSort">Sort by</label>
+        <select id="sort">
+          <option value="" data-i18n="sortDefault">Relevance</option>
+          <option value="price_asc" data-i18n="sortPriceAsc">Price: Low to High</option>
+          <option value="price_desc" data-i18n="sortPriceDesc">Price: High to Low</option>
+          <option value="size_asc" data-i18n="sortSizeAsc">Size: Small to Large</option>
+          <option value="size_desc" data-i18n="sortSizeDesc">Size: Large to Small</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="resultCount"></div>
+    <div class="listing-grid" id="listingGrid"></div>
+    <div class="load-more-wrap">
+      <button class="btn-load" id="loadMore" data-i18n="loadMore">Load more listings</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 data-i18n="contactH2">Let's find your next office</h2>
+    <p data-i18n="contactP">Reach out directly, I respond fast.</p>
+    <div class="contact-buttons">
+      <a class="cb-whatsapp" id="waContact" href="#" target="_blank" rel="noopener" data-i18n="cbWhatsapp">WhatsApp Me</a>
+      <a class="cb-linkedin" href="https://www.linkedin.com/in/mary-eve-lau/" target="_blank" rel="noopener" data-i18n="cbLinkedin">LinkedIn</a>
+      <a class="cb-instagram" href="https://www.instagram.com/maryeve_lau/" target="_blank" rel="noopener" data-i18n="cbInstagram">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <img class="footer-logo" src="images/citicommercial-logo-white.png" alt="Citi Commercial logo" />
+    <span data-i18n="footerText">&copy; 2026 Mary Eve Lau &middot; Senior Property Consultant, Citi Commercial</span>
+  </div>
+</footer>
+
+<script>
+const WA_NUMBER = "6592250733";
+const listings = [{"d":"CBD - Raffles Place","vt":false,"n":"20 Collyer Quay","a":"20 Collyer Quay Singapore 049319","u":"#24-05.06.07","s":2325.0,"r":11.5,"g":26737.5},{"d":"CBD - Raffles Place","vt":false,"n":"20 Collyer Quay","a":"20 Collyer Quay Singapore 049319","u":"#19-03","s":1001.0,"r":11.0,"g":11011.0},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#19-03.04.05.06","s":4801.0,"r":12.5,"g":60012.5},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#18-01.10","s":10828.0,"r":12.5,"g":135350.0},{"d":"CBD - Raffles Place","vt":false,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#17-01","s":1647.0,"r":12.5,"g":20587.5},{"d":"Harbourfront","vt":true,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#21-81.82","s":16102.0,"r":7.5,"g":120765.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#18-83.94","s":15360.0,"r":7.5,"g":115200.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 20W","a":"20 Pasir Panjang Road Singapore 117439","u":"#13-27.28","s":17327.0,"r":7.5,"g":129952.5},{"d":"CBD - Raffles Place","vt":false,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#12-08.09","s":2325.0,"r":12.5,"g":29062.5},{"d":"CBD - Shenton Way","vt":false,"n":"Capital Tower","a":"168 Robinson Road Singapore 068912","u":"#13-01","s":9752.0,"r":11.0,"g":107272.0},{"d":"CBD - Shenton Way","vt":true,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#08-07","s":2339.0,"r":13.0,"g":30407.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 20E","a":"20 Pasir Panjang Road Singapore 117439","u":"#09-23.24","s":9313.0,"r":7.5,"g":69847.5},{"d":"CBD - Raffles Place","vt":false,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#17-00","s":6351.0,"r":8.8,"g":55888.8},{"d":"CBD - Raffles Place","vt":true,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#14-00","s":6351.0,"r":8.8,"g":55888.8},{"d":"CBD - Raffles Place","vt":false,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#11-01.02.10","s":1361.0,"r":12.5,"g":17012.5},{"d":"CBD - Shenton Way","vt":false,"n":"Capital Tower","a":"168 Robinson Road Singapore 068912","u":"#22-01","s":14607.0,"r":11.0,"g":160677.0},{"d":"CBD - Raffles Place","vt":false,"n":"Prudential Tower","a":"30 Cecil Street Singapore 049712","u":"#15-07.08","s":2621.0,"r":11.0,"g":28831.0},{"d":"CBD - Shenton Way","vt":false,"n":"Capital Tower","a":"168 Robinson Road Singapore 068912","u":"#18-03","s":4440.0,"r":11.0,"g":48840.0},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#16-01.09","s":2099.0,"r":12.5,"g":26237.5},{"d":"CBD - Shenton Way","vt":false,"n":"Capital Tower","a":"168 Robinson Road Singapore 068912","u":"#23-01","s":20763.0,"r":11.0,"g":228393.0},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#20-01","s":10828.0,"r":12.5,"g":135350.0},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 1","a":"2 Shenton Way Singapore 068804","u":"#18-01.06","s":9720.0,"r":9.5,"g":92340.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#23-84","s":12207.0,"r":7.5,"g":91552.5},{"d":"Harbourfront","vt":true,"n":"HarbourFront Tower Two","a":"1 Harbourfront Place Singapore 098633","u":"#08-01","s":4273.0,"r":7.7,"g":32902.1},{"d":"CBD - Raffles Place","vt":false,"n":"20 Collyer Quay","a":"20 Collyer Quay Singapore 049319","u":"#09-05","s":1733.0,"r":11.2,"g":19409.6},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 1","a":"2 Shenton Way Singapore 068804","u":"#16-04","s":323.0,"r":9.5,"g":3068.5},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 1","a":"2 Shenton Way Singapore 068804","u":"#17-03A","s":398.0,"r":9.5,"g":3781.0},{"d":"Harbourfront","vt":false,"n":"HarbourFront Tower One","a":"1 Harbourfront Place Singapore 098633","u":"#04-11.12","s":10484.0,"r":8.2,"g":85968.8},{"d":"CBD - Shenton Way","vt":false,"n":"135 Cecil Street","a":"135 Cecil Street Singapore 069536","u":"#05-01","s":2371.02,"r":7.3,"g":17308.45},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-12","s":2195.86,"r":2.5,"g":5489.65},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#05-05","s":1765.3,"r":2.5,"g":4413.25},{"d":"CBD - Raffles Place","vt":false,"n":"20 Collyer Quay","a":"20 Collyer Quay Singapore 049319","u":"#23-03.04","s":2034.0,"r":13.3,"g":27052.2},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#02-00","s":14628.0,"r":8.5,"g":124338.0},{"d":"CBD - Raffles Place","vt":false,"n":"18 Robinson","a":"18 Robinson Road Singapore 048547","u":"#19-01","s":4682.0,"r":13.5,"g":63207.0},{"d":"CBD - Raffles Place","vt":false,"n":"18 Robinson","a":"18 Robinson Road Singapore 048547","u":"#23-01.02","s":8342.0,"r":13.5,"g":112617.0},{"d":"CBD - Shenton Way","vt":true,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#16-01.01A","s":2144.0,"r":7.2,"g":15436.8},{"d":"CBD - Shenton Way","vt":true,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#13-02.02A","s":2636.0,"r":7.5,"g":19770.0},{"d":"CBD - Shenton Way","vt":true,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#13-01","s":989.0,"r":7.2,"g":7120.8},{"d":"CBD - Shenton Way","vt":false,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#09-01B","s":1431.0,"r":7.2,"g":10303.2},{"d":"CBD - Shenton Way","vt":true,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#08-03","s":1347.0,"r":7.5,"g":10102.5},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#28-02","s":1938.0,"r":7.8,"g":15116.4},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#11-02","s":3993.0,"r":8.5,"g":33940.5},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#05-11","s":8729.6,"r":2.5,"g":21824.0},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#26-03","s":3627.0,"r":7.8,"g":28290.6},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#12-01.06","s":15651.0,"r":7.8,"g":122077.8},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#07-11","s":8697.31,"r":2.5,"g":21743.28},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#07-05","s":1765.3,"r":2.5,"g":4413.25},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#06-06","s":3067.74,"r":2.5,"g":7669.35},{"d":"CBD - Shenton Way","vt":false,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#18-01","s":4769.0,"r":8.5,"g":40536.5},{"d":"CBD - City Hall","vt":true,"n":"Raffles City Tower","a":"250 North Bridge Road Singapore 179101","u":"#10-01.02","s":5974.02,"r":13.5,"g":80649.27},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#05-12","s":2195.86,"r":2.5,"g":5489.65},{"d":"CBD - Shenton Way","vt":false,"n":"135 Cecil Street","a":"135 Cecil Street Singapore 069536","u":"#05-02","s":3430.59,"r":7.3,"g":25043.31},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#23-02.03","s":8805.0,"r":8.5,"g":74842.5},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#21-00","s":10828.0,"r":12.5,"g":135350.0},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#19-01","s":3154.0,"r":8.5,"g":26809.0},{"d":"CBD - Raffles Place","vt":true,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#12-03","s":1550.0,"r":13.5,"g":20925.0},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#11-02.03","s":5307.0,"r":7.8,"g":41394.6},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#24-83.84","s":16853.0,"r":7.5,"g":126397.5},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#02-06","s":10139.69,"r":2.8,"g":28391.13},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#02-04","s":4273.31,"r":2.8,"g":11965.27},{"d":"CBD - Raffles Place","vt":false,"n":"Boat Quay Shophouses","a":"25 Lorong Telok Singapore 049037","u":"25 #02-01","s":614.0,"r":5.0,"g":3070.0},{"d":"CBD - Raffles Place","vt":false,"n":"Boat Quay Shophouses","a":"63 Circular Road Singapore 049417","u":"63 #02-01","s":538.0,"r":5.0,"g":2690.0},{"d":"CBD - Raffles Place","vt":false,"n":"Boat Quay Shophouses","a":"66 Circular Road Singapore 049420","u":"66 #02-01","s":732.0,"r":5.0,"g":3660.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 2","a":"78 Shenton Way Singapore 079120","u":"#08-16.17","s":4263.0,"r":9.8,"g":41777.4},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#24-02","s":4069.0,"r":8.5,"g":34586.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#24-01A","s":1841.0,"r":8.5,"g":15648.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#24-01","s":4155.0,"r":8.0,"g":33240.0},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#05-15.16","s":1158.0,"r":5.5,"g":6369.0},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#05-25","s":316.0,"r":5.5,"g":1738.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#16-04","s":1475.0,"r":8.5,"g":12537.5},{"d":"East","vt":false,"n":"Katong Shopping Centre","a":"865 Mountbatten Road Singapore 437844","u":"#06-06","s":484.0,"r":3.8,"g":1839.2},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Craig Road Shophouses","a":"48 Craig Road Singapore 089686","u":"48","s":5500.0,"r":0.0,"g":0.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Duxton Road Shophouses","a":"13 Duxton Hill Singapore 089597","u":"13 #02","s":1100.0,"r":7.27,"g":8000.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"76 Tras Street Singapore 079015","u":"76A #02","s":1700.0,"r":8.53,"g":14500.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"72 Tras Street Singapore 079011","u":"72A #02","s":2000.0,"r":8.0,"g":16000.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"72 Tras Street Singapore 079011","u":"72A #03","s":2500.0,"r":7.5,"g":18750.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"60 Tras Street Singapore 078999","u":"60B #03","s":1200.0,"r":7.92,"g":9500.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"64 Tras Street Singapore 079003","u":"64A #02","s":1800.0,"r":8.06,"g":14500.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Duxton Road Shophouses","a":"16 Duxton Hill Singapore 089599","u":"16A #02","s":1500.0,"r":8.33,"g":12500.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 10","a":"10 Pasir Panjang Road Singapore 117438","u":"#17-01.02","s":26668.0,"r":7.5,"g":200010.0},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 10","a":"10 Pasir Panjang Road Singapore 117438","u":"#18-01.02","s":26668.0,"r":7.5,"g":200010.0},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-10","s":17652.96,"r":2.5,"g":44132.4},{"d":"Bukit Timah Road","vt":true,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#06-14","s":970.0,"r":5.7,"g":5529.0},{"d":"East","vt":false,"n":"Katong Shopping Centre","a":"865 Mountbatten Road Singapore 437844","u":"#05-21","s":441.0,"r":3.8,"g":1675.8},{"d":"East","vt":false,"n":"Katong Shopping Centre","a":"865 Mountbatten Road Singapore 437844","u":"#05-01","s":1012.0,"r":3.8,"g":3845.6},{"d":"CBD - City Hall","vt":true,"n":"Singapore Chinese Chamber of Commerce and Industry Building","a":"47 Hill Street Singapore 179365","u":"#07-02","s":3185.0,"r":8.5,"g":27072.5},{"d":"East","vt":false,"n":"Katong Shopping Centre","a":"865 Mountbatten Road Singapore 437844","u":"#01-77","s":409.0,"r":3.8,"g":1554.2},{"d":"CBD - Raffles Place","vt":false,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#11-01","s":1615.0,"r":13.5,"g":21802.5},{"d":"CBD - City Hall","vt":false,"n":"Odeon Towers","a":"331 North Bridge Road Singapore 188720","u":"#11-02","s":1735.0,"r":9.0,"g":15615.0},{"d":"CBD - City Hall","vt":true,"n":"Odeon Towers","a":"331 North Bridge Road Singapore 188720","u":"#05-01.02","s":2303.0,"r":9.0,"g":20727.0},{"d":"CBD - City Hall","vt":false,"n":"Odeon Towers","a":"331 North Bridge Road Singapore 188720","u":"#10-04.05","s":1528.0,"r":9.0,"g":13752.0},{"d":"CBD - City Hall","vt":false,"n":"Odeon Towers","a":"331 North Bridge Road Singapore 188720","u":"#11-01","s":1528.0,"r":9.0,"g":13752.0},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#06-18","s":545.0,"r":5.5,"g":2997.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#23-01","s":10590.0,"r":8.5,"g":90015.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#15-03","s":2895.0,"r":8.5,"g":24607.5},{"d":"CBD - Shenton Way","vt":false,"n":"135 Cecil Street","a":"135 Cecil Street Singapore 069536","u":"#09-02","s":829.0,"r":5.9,"g":4891.1},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#13-02.03","s":1942.0,"r":9.0,"g":17478.0},{"d":"Beach Road","vt":false,"n":"Guoco Midtown","a":"128 Beach Road Singapore 189773","u":"#14-02","s":2486.0,"r":14.8,"g":36792.8},{"d":"Beach Road","vt":true,"n":"Guoco Midtown","a":"128 Beach Road Singapore 189773","u":"#02-01","s":4715.0,"r":20.0,"g":94300.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#30-01.08","s":11644.0,"r":9.0,"g":104796.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#26-01.08","s":11882.0,"r":9.0,"g":106938.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#27-01.04","s":6359.0,"r":9.0,"g":57231.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#27-08","s":1400.0,"r":9.0,"g":12600.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#25-03","s":1648.0,"r":9.0,"g":14832.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#18-08","s":1364.0,"r":9.0,"g":12276.0},{"d":"Beach Road","vt":false,"n":"Gateway West","a":"150 Beach Road Singapore 189720","u":"#03-01.08","s":11429.0,"r":9.0,"g":102861.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#19-06.07","s":2240.0,"r":9.0,"g":20160.0},{"d":"Beach Road","vt":true,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#13-01","s":1685.0,"r":9.0,"g":15165.0},{"d":"CBD - Raffles Place","vt":false,"n":"18 Robinson","a":"18 Robinson Road Singapore 048547","u":"#01-01","s":2700.0,"r":15.0,"g":40500.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#11-01","s":2157.0,"r":9.0,"g":19413.0},{"d":"Beach Road","vt":true,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#06-05","s":1575.0,"r":9.0,"g":14175.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#05-01.02","s":2787.0,"r":9.0,"g":25083.0},{"d":"Beach Road","vt":true,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#04-05","s":1856.0,"r":9.0,"g":16704.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#03-05.07","s":3103.0,"r":9.0,"g":27927.0},{"d":"Beach Road","vt":true,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#02-05","s":1418.0,"r":9.0,"g":12762.0},{"d":"East","vt":false,"n":"Katong Shopping Centre","a":"865 Mountbatten Road Singapore 437844","u":"#01-41A","s":65.0,"r":10.0,"g":650.0},{"d":"River Valley","vt":true,"n":"Kings Centre","a":"390 Havelock Road Singapore 169662","u":"#06-04","s":1421.0,"r":9.2,"g":13073.2},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 20W","a":"20 Pasir Panjang Road Singapore 117439","u":"#04-25","s":3897.0,"r":7.5,"g":29227.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#15-01A","s":2390.0,"r":8.5,"g":20315.0},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"736 Geylang Road Singapore 389647","u":"736B #03","s":969.0,"r":3.5,"g":3391.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#14-01","s":4682.0,"r":8.5,"g":39797.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#12-01","s":9989.0,"r":8.5,"g":84906.5},{"d":"CBD - Tanjong Pagar","vt":true,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#11-03","s":1550.0,"r":8.0,"g":12400.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#10-01.02.03","s":9989.0,"r":8.5,"g":84906.5},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#09-02","s":2766.0,"r":8.5,"g":23511.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#07-03","s":1550.0,"r":8.0,"g":12400.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#05-01","s":2056.0,"r":8.0,"g":16448.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"78 Shenton Way Tower 1","a":"78 Shenton Way Singapore 079120","u":"#04-02","s":3993.0,"r":8.0,"g":31944.0},{"d":"Harbourfront","vt":true,"n":"HarbourFront Tower Two","a":"1 Harbourfront Place Singapore 098633","u":"#10-01.04","s":10893.0,"r":7.7,"g":83876.1},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"712B Geylang Road Singapore 389627","u":"712B #03","s":1119.0,"r":3.5,"g":3916.5},{"d":"CBD - Shenton Way","vt":false,"n":"BEA Building","a":"60 Robinson Road Singapore 068892","u":"#14-01","s":2905.0,"r":8.5,"g":24692.5},{"d":"Harbourfront","vt":false,"n":"Mapletree Business City - Block 20W","a":"20 Pasir Panjang Road Singapore 117439","u":"#10-25.28","s":34541.0,"r":7.5,"g":259057.5},{"d":"CBD - Shenton Way","vt":false,"n":"BEA Building","a":"60 Robinson Road Singapore 068892","u":"#12-02","s":2561.0,"r":8.5,"g":21768.5},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#08-03","s":3552.0,"r":7.8,"g":27705.6},{"d":"Harbourfront","vt":false,"n":"mTower","a":"460 Alexandra Road Singapore 119963","u":"#06-01","s":13993.0,"r":7.8,"g":109145.4},{"d":"CBD - Raffles Place","vt":false,"n":"21 Collyer Quay","a":"21 Collyer Quay Singapore 049320","u":"#B1","s":6321.0,"r":10.0,"g":63210.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#12-02","s":2476.0,"r":8.8,"g":21788.8},{"d":"CBD - Raffles Place","vt":true,"n":"18 Robinson","a":"18 Robinson Road Singapore 048547","u":"#11-01","s":6500.0,"r":13.5,"g":87750.0},{"d":"Bugis Rochor","vt":false,"n":"Parkview Square","a":"600 North Bridge Road Singapore 188778","u":"TBA","s":15420.0,"r":10.0,"g":154200.0},{"d":"CBD - Raffles Place","vt":false,"n":"18 Robinson","a":"18 Robinson Road Singapore 048547","u":"#03-01A","s":678.0,"r":15.0,"g":10170.0},{"d":"Harbourfront","vt":true,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#13-81.84","s":31765.0,"r":7.5,"g":238237.5},{"d":"Harbourfront","vt":true,"n":"Mapletree Business City - Block 80","a":"80 Pasir Panjang Road Singapore 117372","u":"#12-81.84","s":31765.0,"r":7.5,"g":238237.5},{"d":"CBD - Shenton Way","vt":false,"n":"135 Cecil Street","a":"135 Cecil Street Singapore 069536","u":"#12-01","s":6511.0,"r":7.4,"g":48181.4},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#05-17.26","s":974.0,"r":5.5,"g":5357.0},{"d":"CBD - Shenton Way","vt":false,"n":"135 Cecil Street","a":"135 Cecil Street Singapore 069536","u":"#06-01","s":2292.7,"r":7.3,"g":16736.71},{"d":"CBD - City Hall","vt":true,"n":"Raffles City Tower","a":"250 North Bridge Road Singapore 179101","u":"#05-03","s":1022.58,"r":13.5,"g":13804.83},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-11","s":8729.6,"r":2.5,"g":21824.0},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#21-01","s":3186.0,"r":8.5,"g":27081.0},{"d":"CBD - Shenton Way","vt":false,"n":"71 Robinson Road","a":"71 Robinson Road Singapore 068895","u":"#06-04","s":4844.0,"r":10.0,"g":48440.0},{"d":"CBD - Shenton Way","vt":false,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#22-01.01A","s":3197.0,"r":8.5,"g":27174.5},{"d":"CBD - Shenton Way","vt":true,"n":"80 Robinson Road","a":"80 Robinson Road Singapore 068898","u":"#23-01","s":2390.0,"r":8.5,"g":20315.0},{"d":"CBD - City Hall","vt":true,"n":"Raffles City Tower","a":"250 North Bridge Road Singapore 179101","u":"#09-01.04","s":10710.18,"r":13.5,"g":144587.43},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 1","a":"2 Shenton Way Singapore 068804","u":"#16-02","s":4079.0,"r":9.5,"g":38750.5},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 2","a":"4 Shenton Way Singapore 068807","u":"#14-02","s":800.0,"r":9.5,"g":7600.0},{"d":"CBD - Shenton Way","vt":true,"n":"SGX Centre 2","a":"4 Shenton Way Singapore 068807","u":"#15-06","s":1231.0,"r":9.5,"g":11694.5},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 2","a":"4 Shenton Way Singapore 068807","u":"#25-01","s":1165.0,"r":9.5,"g":11067.5},{"d":"CBD - Raffles Place","vt":false,"n":"Singapore Land Tower","a":"50 Raffles Place Singapore 048623","u":"#08-01.02","s":5188.0,"r":13.5,"g":70038.0},{"d":"CBD - Raffles Place","vt":true,"n":"Singapore Land Tower","a":"50 Raffles Place Singapore 048623","u":"#13-02.04","s":6463.0,"r":13.5,"g":87250.5},{"d":"CBD - Raffles Place","vt":true,"n":"Singapore Land Tower","a":"50 Raffles Place Singapore 048623","u":"#14-03.05","s":6262.0,"r":13.5,"g":84537.0},{"d":"CBD - Raffles Place","vt":true,"n":"Singapore Land Tower","a":"50 Raffles Place Singapore 048623","u":"#15-03","s":2204.0,"r":13.5,"g":29754.0},{"d":"CBD - Raffles Place","vt":false,"n":"Singapore Land Tower","a":"50 Raffles Place Singapore 048623","u":"#34-06","s":3132.0,"r":13.5,"g":42282.0},{"d":"CBD - Shenton Way","vt":false,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#06-02","s":1938.0,"r":7.0,"g":13566.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#29-02","s":3380.0,"r":12.5,"g":42250.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#23-03","s":2454.0,"r":12.5,"g":30675.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#17-05","s":2002.0,"r":12.5,"g":25025.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#25-01.04","s":6359.0,"r":9.0,"g":57231.0},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"722 Geylang Road Singapore 389633","u":"722B #03","s":1066.0,"r":3.5,"g":3731.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"#31-06.08","s":3201.0,"r":9.0,"g":28809.0},{"d":"River Valley","vt":false,"n":"Kings Centre","a":"390 Havelock Road Singapore 169662","u":"#07-01","s":2250.0,"r":8.5,"g":19125.0},{"d":"CBD - Raffles Place","vt":false,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#16-01","s":2048.0,"r":13.0,"g":26624.0},{"d":"CBD - Raffles Place","vt":false,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#16-03","s":2379.0,"r":13.0,"g":30927.0},{"d":"CBD - Raffles Place","vt":true,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#16-04.04A","s":3392.0,"r":13.0,"g":44096.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#12-01","s":3251.0,"r":8.8,"g":28608.8},{"d":"CBD - Raffles Place","vt":false,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#09-01","s":2153.0,"r":8.8,"g":18946.4},{"d":"CBD - Raffles Place","vt":true,"n":"One Finlayson Green","a":"1 Finlayson Green Singapore 049246","u":"#07-01","s":3251.0,"r":8.8,"g":28608.8},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"726A Geylang Road Singapore 389637","u":"726B #03","s":1066.0,"r":3.5,"g":3731.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#23-02.03","s":3929.0,"r":12.5,"g":49112.5},{"d":"CBD - Raffles Place","vt":false,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#22-01.04","s":22271.0,"r":13.0,"g":289523.0},{"d":"Novena.Newton","vt":false,"n":"Goldbell Towers","a":"47 Scotts Road Singapore 228233","u":"#02-01","s":731.0,"r":12.8,"g":9356.8},{"d":"Novena.Newton","vt":false,"n":"Goldbell Towers","a":"47 Scotts Road Singapore 228233","u":"#05-02","s":1571.0,"r":9.5,"g":14924.5},{"d":"Novena.Newton","vt":false,"n":"Goldbell Towers","a":"47 Scotts Road Singapore 228233","u":"#13-04","s":1672.0,"r":9.5,"g":15884.5},{"d":"Novena.Newton","vt":false,"n":"Goldbell Towers","a":"47 Scotts Road Singapore 228233","u":"#B1","s":3500.0,"r":12.8,"g":44800.0},{"d":"CBD - Raffles Place","vt":true,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#32-03","s":3526.0,"r":13.0,"g":45838.0},{"d":"Bugis Rochor","vt":false,"n":"The Bencoolen","a":"180 Bencoolen Street Singapore 189646","u":"#07-05","s":754.0,"r":5.2,"g":3920.8},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#21-04","s":1647.0,"r":12.5,"g":20587.5},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#22-05A","s":1410.0,"r":12.5,"g":17625.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#23-02","s":1496.0,"r":12.5,"g":18700.0},{"d":"CBD - Shenton Way","vt":true,"n":"Keck Seng Tower","a":"133 Cecil Street Singapore 069535","u":"#05-02","s":543.0,"r":5.5,"g":2986.5},{"d":"Novena.Newton","vt":false,"n":"SLF Building","a":"510 Thomson Road Singapore 298135","u":"#15-01.02","s":4201.42,"r":5.0,"g":21007.1},{"d":"One-North","vt":true,"n":"The Metropolis Tower 2","a":"11 North Buona Vista Drive Singapore 138589","u":"#15-07.10","s":27739.0,"r":9.2,"g":255198.8},{"d":"Orchard Road","vt":false,"n":"Forum","a":"583 Orchard Road Singapore 238884","u":"#16-02","s":4421.31,"r":6.5,"g":28738.52},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Guoco Tower","a":"1 Wallich Street Singapore 078881","u":"#07-01","s":13487.0,"r":14.0,"g":188818.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Guoco Tower","a":"1 Wallich Street Singapore 078881","u":"#25-01A","s":4908.0,"r":14.0,"g":68712.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Guoco Tower","a":"1 Wallich Street Singapore 078881","u":"#09-03","s":1453.0,"r":14.0,"g":20342.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#48","s":8956.0,"r":12.5,"g":111950.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#46","s":9612.0,"r":12.5,"g":120150.0},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#44-02","s":4898.0,"r":13.5,"g":66123.0},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#10-03.04","s":2303.0,"r":12.5,"g":28787.5},{"d":"CBD - Raffles Place","vt":true,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#10-01.02.10","s":1341.0,"r":12.5,"g":16762.5},{"d":"CBD - Raffles Place","vt":false,"n":"PLUS","a":"20 Cecil Street Singapore 049705","u":"#07-10","s":786.0,"r":12.5,"g":9825.0},{"d":"CBD - City Hall","vt":true,"n":"Peninsula Plaza","a":"111 North Bridge Road Singapore 179098","u":"#21-02","s":1486.0,"r":6.2,"g":9213.2},{"d":"CBD - Shenton Way","vt":true,"n":"SIF Building","a":"96 Robinson Road Singapore 068899","u":"#12-04","s":987.0,"r":9.2,"g":9080.4},{"d":"CBD - Raffles Place","vt":false,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#22-01","s":1700.0,"r":10.5,"g":11550.0},{"d":"CBD - Raffles Place","vt":false,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#02-12","s":1158.21,"r":15.0,"g":17373.15},{"d":"CBD - City Hall","vt":false,"n":"Peninsula Plaza","a":"111 North Bridge Road Singapore 179098","u":"#27-03","s":2175.0,"r":6.5,"g":14137.5},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#04-05.06","s":9171.0,"r":9.2,"g":84373.2},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#04-03.04","s":4166.0,"r":9.2,"g":38327.2},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#04-03.04.05.06","s":14000.0,"r":9.2,"g":128800.0},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#11-04.06","s":11754.0,"r":9.2,"g":108136.8},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#15-04.06","s":11808.0,"r":9.2,"g":108633.6},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#20-05.06","s":7804.0,"r":9.2,"g":71796.8},{"d":"One-North","vt":true,"n":"The Metropolis Tower 2","a":"11 North Buona Vista Drive Singapore 138589","u":"#14-07","s":2207.0,"r":9.2,"g":20304.4},{"d":"Novena.Newton","vt":false,"n":"United Square - Office Tower","a":"101 Thomson Road Singapore 307591","u":"#13-03","s":3455.0,"r":8.8,"g":30404.0},{"d":"CBD - Shenton Way","vt":true,"n":"SIF Building","a":"96 Robinson Road Singapore 068899","u":"#13-01","s":1309.0,"r":9.2,"g":12042.8},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#16-04","s":1668.0,"r":12.5,"g":20850.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#09-02","s":2668.0,"r":8.0,"g":21344.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#14-04","s":1169.0,"r":12.5,"g":14612.5},{"d":"CBD - Raffles Place","vt":true,"n":"Republic Plaza 2","a":"9 Raffles Place Singapore 048619","u":"#14","s":9688.0,"r":11.0,"g":106568.0},{"d":"Novena.Newton","vt":false,"n":"SLF Building","a":"510 Thomson Road Singapore 298135","u":"#12-01","s":936.0,"r":5.0,"g":4680.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#20-01","s":7233.0,"r":9.0,"g":65097.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#17-01","s":7233.0,"r":9.0,"g":65097.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#16-01","s":7233.0,"r":9.0,"g":65097.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#15-01","s":3560.0,"r":9.0,"g":32040.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#14-01","s":3560.0,"r":9.0,"g":32040.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#13-01","s":3560.0,"r":9.0,"g":32040.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#08-02","s":2668.0,"r":8.0,"g":21344.0},{"d":"CBD - Raffles Place","vt":false,"n":"Hong Leong Building","a":"16 Raffles Quay Singapore 048581","u":"#15-03","s":2532.0,"r":9.5,"g":19019.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"Hub Synergy Point","a":"70 Anson Road Singapore 079905","u":"#07-02","s":2668.0,"r":8.0,"g":21344.0},{"d":"CBD - Raffles Place","vt":true,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#32-01","s":3412.19,"r":10.5,"g":35828.0},{"d":"CBD - Raffles Place","vt":false,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#30-01","s":3003.16,"r":10.5,"g":31533.18},{"d":"CBD - Raffles Place","vt":false,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#24-03.04","s":2787.87,"r":11.0,"g":30666.57},{"d":"CBD - Raffles Place","vt":false,"n":"Collyer Quay Centre","a":"16 Collyer Quay Singapore 049318","u":"#22-01A","s":1100.0,"r":10.5,"g":17167.5},{"d":"CBD - Shenton Way","vt":false,"n":"SIF Building","a":"96 Robinson Road Singapore 068899","u":"#17-01","s":1309.0,"r":9.2,"g":12042.8},{"d":"CBD - Shenton Way","vt":true,"n":"SIF Building","a":"96 Robinson Road Singapore 068899","u":"#14-04","s":987.0,"r":9.2,"g":9080.4},{"d":"CBD - Shenton Way","vt":true,"n":"SIF Building","a":"96 Robinson Road Singapore 068899","u":"#14-01","s":1309.0,"r":9.2,"g":12042.8},{"d":"CBD - Raffles Place","vt":false,"n":"Hong Leong Building","a":"16 Raffles Quay Singapore 048581","u":"#44-03","s":2002.0,"r":9.5,"g":19019.0},{"d":"CBD - Raffles Place","vt":false,"n":"Hong Leong Building","a":"16 Raffles Quay Singapore 048581","u":"#39-01B","s":571.0,"r":9.5,"g":19019.0},{"d":"CBD - Shenton Way","vt":false,"n":"61 Robinson","a":"61 Robinson Road Singapore 068893","u":"TBA","s":9214.0,"r":11.0,"g":101354.0},{"d":"CBD - Raffles Place","vt":false,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#20-01","s":4951.0,"r":13.5,"g":66838.5},{"d":"Novena.Newton","vt":true,"n":"United Square - Office Tower","a":"101 Thomson Road Singapore 307591","u":"#10-01","s":1696.0,"r":8.8,"g":14924.8},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#03-01","s":3966.53,"r":2.5,"g":9916.33},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#05-13","s":1104.0,"r":5.7,"g":6292.8},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#05-04","s":925.0,"r":6.0,"g":5550.0},{"d":"Bukit Timah Road","vt":true,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#03-07","s":646.0,"r":5.5,"g":3553.0},{"d":"Bukit Timah Road","vt":true,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#03-06","s":616.0,"r":5.5,"g":3388.0},{"d":"Bukit Timah Road","vt":false,"n":"Boon Siew Building","a":"75 Bukit Timah Road Singapore 229833","u":"#02-01.02","s":332.1,"r":6.0,"g":1992.6},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-07","s":1797.59,"r":2.5,"g":4493.98},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-05","s":1765.3,"r":2.5,"g":4413.25},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#04-01.02.03","s":18600.19,"r":2.5,"g":46500.48},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#03-04.15","s":17760.6,"r":2.5,"g":44401.5},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#03-03","s":10161.22,"r":2.5,"g":25403.05},{"d":"North","vt":false,"n":"Admirax","a":"8 Admiralty Street Singapore 757438","u":"#02-07","s":9752.18,"r":2.8,"g":27306.1},{"d":"Novena.Newton","vt":false,"n":"United Square - Office Tower","a":"101 Thomson Road Singapore 307591","u":"#09-02","s":797.0,"r":8.8,"g":7013.6},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Anson House","a":"72 Anson Road Singapore 079911","u":"#12-01","s":2583.36,"r":9.5,"g":24541.92},{"d":"Orchard Road","vt":false,"n":"Visioncrest Commercial","a":"103 Penang Road Singapore 238467","u":"TBA","s":3152.0,"r":9.0,"g":28368.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#32-03","s":291.0,"r":12.0,"g":3492.0},{"d":"CBD - Raffles Place","vt":false,"n":"Capital Square 2","a":"21 Church Street Singapore 049480","u":"#02-01","s":2433.0,"r":8.0,"g":19464.0},{"d":"CBD - Promenade","vt":false,"n":"Millenia Tower","a":"1 Temasek Avenue Singapore 039192","u":"TBA","s":4000.0,"r":16.0,"g":64000.0},{"d":"CBD - Downtown","vt":false,"n":"One Raffles Quay North Tower","a":"1 Raffles Quay Singapore 048583","u":"#10-03","s":2949.0,"r":14.0,"g":41286.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#60-00","s":6017.0,"r":13.0,"g":78221.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#54-00","s":4876.0,"r":13.0,"g":63388.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#44-03","s":3886.0,"r":12.0,"g":46632.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#44-01A","s":2110.0,"r":12.0,"g":25320.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#34-03","s":2034.0,"r":12.0,"g":24408.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#38-61","s":4359.0,"r":13.0,"g":56667.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Anson House","a":"72 Anson Road Singapore 079911","u":"#12-03","s":2486.48,"r":9.5,"g":23621.56},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#30-61","s":4015.0,"r":13.0,"g":52195.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#27-61A","s":1798.0,"r":13.0,"g":23374.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#27-01.02","s":5489.0,"r":12.0,"g":65868.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#26-03","s":291.0,"r":12.0,"g":3492.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#20-61.62","s":3627.0,"r":13.0,"g":47151.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#19-61","s":10689.0,"r":13.0,"g":138957.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#23-01","s":1625.0,"r":12.0,"g":19500.0},{"d":"CBD - Raffles Place","vt":true,"n":"One Raffles Place Tower 1","a":"1 Raffles Place Singapore 048616","u":"#19-01","s":2992.0,"r":12.0,"g":35904.0},{"d":"CBD - Raffles Place","vt":false,"n":"One Raffles Place Tower 2","a":"1 Raffles Place Singapore 048616","u":"#10-62","s":4198.0,"r":13.0,"g":54574.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Amara Corporate Tower","a":"165 Tanjong Pagar Road Singapore 088539","u":"#09-02","s":743.0,"r":15.0,"g":11145.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Amara Corporate Tower","a":"165 Tanjong Pagar Road Singapore 088539","u":"#10-01","s":2000.0,"r":13.0,"g":26000.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#07-00","s":12433.0,"r":8.5,"g":105680.5},{"d":"Bugis Rochor","vt":false,"n":"Lazada One","a":"51 Bras Basah Road Singapore 189554","u":"#02-01.02","s":5027.0,"r":10.0,"g":50270.0},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"TBA","s":13200.0,"r":13.0,"g":171600.0},{"d":"Orchard Road","vt":false,"n":"Visioncrest Commercial","a":"103 Penang Road Singapore 238467","u":"TBA","s":1854.0,"r":9.0,"g":16686.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#06-04","s":1970.0,"r":8.5,"g":16745.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"#37-02","s":19085.0,"r":14.0,"g":267190.0},{"d":"CBD - Tanjong Pagar","vt":true,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#06-03","s":2927.0,"r":8.5,"g":24879.5},{"d":"CBD - Tanjong Pagar","vt":true,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#01-01","s":3723.0,"r":8.5,"g":31645.5},{"d":"CBD - Downtown","vt":true,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"#32-03","s":6684.0,"r":14.0,"g":93576.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"#19-03","s":9042.0,"r":14.0,"g":126588.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Two","a":"9 Temasek Boulevard Singapore 038989","u":"TBA","s":3961.0,"r":11.5,"g":45551.5},{"d":"Bugis Rochor","vt":false,"n":"Lazada One","a":"51 Bras Basah Road Singapore 189554","u":"#07-08","s":1830.0,"r":10.0,"g":18300.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"#19-01","s":5942.0,"r":14.0,"g":83188.0},{"d":"Bugis Rochor","vt":false,"n":"Lazada One","a":"51 Bras Basah Road Singapore 189554","u":"#08-04.06","s":9494.0,"r":10.0,"g":94940.0},{"d":"Bugis Rochor","vt":false,"n":"North Bridge Centre","a":"420 North Bridge Road Singapore 188727","u":"#03-40","s":603.0,"r":6.3,"g":3798.9},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"#18-06","s":2433.0,"r":14.0,"g":34062.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 2","a":"10 Marina Boulevard Singapore 018983","u":"#15-02A","s":2088.0,"r":14.0,"g":29232.0},{"d":"Bugis Rochor","vt":false,"n":"North Bridge Centre","a":"420 North Bridge Road Singapore 188727","u":"#01-04","s":667.0,"r":11.84,"g":7900.0},{"d":"Bugis Rochor","vt":false,"n":"North Bridge Centre","a":"420 North Bridge Road Singapore 188727","u":"#04-07","s":431.0,"r":6.5,"g":2801.5},{"d":"Novena.Newton","vt":false,"n":"United Square - Office Tower","a":"101 Thomson Road Singapore 307591","u":"#24-01.05","s":9537.0,"r":8.8,"g":83925.6},{"d":"CBD - Shenton Way","vt":false,"n":"City House","a":"36 Robinson Road Singapore 068877","u":"#09-03.04","s":1905.0,"r":8.8,"g":16764.0},{"d":"CBD - Shenton Way","vt":false,"n":"City House","a":"36 Robinson Road Singapore 068877","u":"#08-01.06","s":7535.0,"r":8.8,"g":66308.0},{"d":"CBD - Shenton Way","vt":false,"n":"61 Robinson","a":"61 Robinson Road Singapore 068893","u":"#13-01","s":1830.0,"r":11.0,"g":20130.0},{"d":"CBD - City Hall","vt":true,"n":"FUNAN Tower 1","a":"109 North Bridge Road Singapore 179097","u":"#09-21.29","s":10947.0,"r":13.0,"g":142311.0},{"d":"CBD - City Hall","vt":false,"n":"FUNAN Tower 1","a":"109 North Bridge Road Singapore 179097","u":"#07-35","s":710.42,"r":13.0,"g":9235.46},{"d":"CBD - Raffles Place","vt":false,"n":"Boat Quay Shophouses","a":"78 Circular Road Singapore 049432","u":"78 #03-01","s":1324.0,"r":5.0,"g":6620.0},{"d":"Novena.Newton","vt":false,"n":"United Square - Office Tower","a":"101 Thomson Road Singapore 307591","u":"#17-05","s":2174.0,"r":8.8,"g":19131.2},{"d":"One-North","vt":true,"n":"Elementum","a":"1 North Buona Vista Link Singapore 139691","u":"#12-02","s":1776.0,"r":8.2,"g":14563.2},{"d":"One-North","vt":true,"n":"Elementum","a":"1 North Buona Vista Link Singapore 139691","u":"#12-01","s":3025.0,"r":8.2,"g":24805.0},{"d":"CBD - Raffles Place","vt":false,"n":"Royal Group Building","a":"3 Phillip Street Singapore 048693","u":"#09-05","s":1600.0,"r":9.5,"g":15200.0},{"d":"CBD - Raffles Place","vt":false,"n":"Royal Group Building","a":"3 Phillip Street Singapore 048693","u":"#14-02","s":807.0,"r":9.5,"g":7666.5},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"63 Queen Street Singapore 188542","u":"63A #02","s":2121.0,"r":5.0,"g":10605.0},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#09-01.10","s":25119.0,"r":13.0,"g":326547.0},{"d":"CBD - Downtown","vt":false,"n":"Asia Square Tower 2","a":"12 Marina View Singapore 018961","u":"#20-01","s":4884.0,"r":13.5,"g":65934.0},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"62 Queen Street Singapore 188541","u":"62B #03","s":936.0,"r":7.0,"g":6552.0},{"d":"CBD - Shenton Way","vt":true,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#08-01.10","s":4523.0,"r":13.0,"g":58799.0},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"233 Victoria Street Singapore 188026","u":"233B #03","s":926.0,"r":7.0,"g":6482.0},{"d":"CBD - Raffles Place","vt":true,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#07-01","s":5338.0,"r":13.0,"g":69394.0},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"231 Victoria Street Singapore 188025","u":"231B #03","s":926.0,"r":7.0,"g":6482.0},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#08-02.06","s":12382.0,"r":13.0,"g":160966.0},{"d":"CBD - Raffles Place","vt":false,"n":"Boat Quay Shophouses","a":"76 Circular Road Singapore 049430","u":"76 #02-01","s":1313.0,"r":5.0,"g":6565.0},{"d":"CBD - Downtown","vt":false,"n":"Asia Square Tower 2","a":"12 Marina View Singapore 018961","u":"#25-04","s":8717.0,"r":13.5,"g":117679.5},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#13-01.10","s":25300.0,"r":13.0,"g":328900.0},{"d":"CBD - Raffles Place","vt":true,"n":"CapitaGreen","a":"138 Market Street Singapore 048946","u":"#03-06","s":2718.0,"r":13.0,"g":35334.0},{"d":"Orchard Road","vt":false,"n":"Forum","a":"583 Orchard Road Singapore 238884","u":"#07-01","s":1668.42,"r":7.0,"g":11678.94},{"d":"CBD - Downtown","vt":true,"n":"Asia Square Tower 2","a":"12 Marina View Singapore 018961","u":"#19-02","s":5427.0,"r":13.5,"g":73264.5},{"d":"CBD - Raffles Place","vt":false,"n":"Royal Group Building","a":"3 Phillip Street Singapore 048693","u":"#08-04","s":2325.0,"r":9.5,"g":22087.5},{"d":"CBD - Downtown","vt":false,"n":"Asia Square Tower 2","a":"12 Marina View Singapore 018961","u":"#18-02","s":5000.0,"r":13.5,"g":67500.0},{"d":"CBD - Raffles Place","vt":false,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#18-05","s":3843.0,"r":13.5,"g":51880.5},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"64 Queen Street Singapore 188543","u":"64B #03","s":1378.0,"r":6.0,"g":8268.0},{"d":"CBD - Raffles Place","vt":false,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#21-01","s":4962.0,"r":13.5,"g":66987.0},{"d":"CBD - Raffles Place","vt":true,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#24-02A","s":2756.0,"r":13.5,"g":37206.0},{"d":"Orchard Road","vt":false,"n":"Forum","a":"583 Orchard Road Singapore 238884","u":"#16-01","s":4667.0,"r":6.5,"g":30335.5},{"d":"CBD - Raffles Place","vt":false,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#29-04","s":4833.0,"r":13.5,"g":65245.5},{"d":"CBD - Downtown","vt":false,"n":"Asia Square Tower 2","a":"12 Marina View Singapore 018961","u":"#18-01","s":3745.0,"r":13.5,"g":50557.5},{"d":"CBD - Raffles Place","vt":true,"n":"6 Battery Road","a":"6 Battery Road Singapore 049909","u":"#39-04","s":4058.0,"r":13.5,"g":54783.0},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#11-01.10","s":25578.0,"r":13.0,"g":332514.0},{"d":"CBD - Shenton Way","vt":false,"n":"CapitaSky","a":"79 Robinson Road Singapore 068897","u":"#10-01.10","s":25119.0,"r":13.0,"g":326547.0},{"d":"Bugis Rochor","vt":false,"n":"Bugis Village Shophouses","a":"63 Queen Street Singapore 188542","u":"63B #03","s":2056.0,"r":5.0,"g":10280.0},{"d":"One-North","vt":true,"n":"Elementum","a":"1 North Buona Vista Link Singapore 139691","u":"#12-03","s":2616.0,"r":8.2,"g":21451.2},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Guoco Tower","a":"1 Wallich Street Singapore 078881","u":"#15-01","s":18331.0,"r":14.0,"g":256634.0},{"d":"One-North","vt":false,"n":"The Metropolis Tower 2","a":"11 North Buona Vista Drive Singapore 138589","u":"#16-07","s":16824.0,"r":9.2,"g":154780.8},{"d":"CBD - Raffles Place","vt":false,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#24-04","s":3358.37,"r":10.5,"g":35262.89},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#30-04","s":1346.0,"r":12.5,"g":16825.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#34-01","s":6092.0,"r":12.5,"g":76150.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#34-01A.02","s":10818.0,"r":12.5,"g":135225.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#34-01A.02b","s":4208.0,"r":12.5,"g":52600.0},{"d":"CBD - Raffles Place","vt":false,"n":"Royal One Phillip","a":"1 Phillip Street Singapore 048692","u":"#14-00","s":2659.0,"r":9.5,"g":25260.5},{"d":"CBD - Raffles Place","vt":true,"n":"Royal One Phillip","a":"1 Phillip Street Singapore 048692","u":"#07-00","s":2971.0,"r":9.5,"g":28224.5},{"d":"CBD - Raffles Place","vt":true,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#15-03","s":3875.04,"r":10.5,"g":40687.92},{"d":"CBD - Raffles Place","vt":true,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#23-02.03.04","s":6845.9,"r":10.5,"g":71881.95},{"d":"CBD - Raffles Place","vt":true,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#24-02","s":861.0,"r":10.5,"g":9040.5},{"d":"CBD - Shenton Way","vt":true,"n":"SGX Centre 2","a":"4 Shenton Way Singapore 068807","u":"#14-01","s":960.0,"r":9.5,"g":9120.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#25-01A","s":2228.0,"r":12.5,"g":27850.0},{"d":"CBD - Clarke Quay","vt":true,"n":"Havelock II","a":"2 Havelock Road Singapore 059763","u":"#07-06","s":1087.0,"r":8.0,"g":8696.0},{"d":"Beach Road","vt":false,"n":"Beach Road Shophouses","a":"723 North Bridge Road Singapore 198691","u":"723A #02","s":1501.0,"r":6.33,"g":9500.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#09","s":3014.0,"r":8.5,"g":25619.0},{"d":"CBD - Downtown","vt":true,"n":"One Raffles Quay North Tower","a":"1 Raffles Quay Singapore 048583","u":"#30-03","s":2487.0,"r":14.0,"g":34818.0},{"d":"Orchard Road","vt":true,"n":"Visioncrest Commercial","a":"103 Penang Road Singapore 238467","u":"TBA","s":14478.0,"r":9.0,"g":130302.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Anson House","a":"72 Anson Road Singapore 079911","u":"#05-01","s":1292.0,"r":9.3,"g":12015.6},{"d":"CBD - Shenton Way","vt":false,"n":"Amoy Street Shophouses","a":"41 Amoy Street Singapore 069867","u":"41B #03","s":1200.0,"r":5.75,"g":6900.0},{"d":"CBD - Shenton Way","vt":true,"n":"SGX Centre 1","a":"2 Shenton Way Singapore 068804","u":"#08-01","s":2918.0,"r":9.0,"g":26262.0},{"d":"Beach Road","vt":false,"n":"Gateway East","a":"152 Beach Road Singapore 189721","u":"TBA","s":3100.0,"r":9.0,"g":27900.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Four","a":"6 Temasek Boulevard Singapore 038986","u":"#13-01.05","s":13928.0,"r":11.0,"g":153208.0},{"d":"CBD - Shenton Way","vt":false,"n":"SBF Centre","a":"160 Robinson Road Singapore 068914","u":"#24-08","s":947.0,"r":10.0,"g":9470.0},{"d":"CBD - Raffles Place","vt":false,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#10","s":3000.0,"r":10.5,"g":31500.0},{"d":"East","vt":false,"n":"ARC 380","a":"380 Jalan Besar Singapore 209000","u":"#11-02","s":700.0,"r":7.0,"g":4900.0},{"d":"CBD - Shenton Way","vt":false,"n":"SGX Centre 2","a":"4 Shenton Way Singapore 068807","u":"TBA","s":4800.0,"r":9.5,"g":45600.0},{"d":"CBD - Raffles Place","vt":false,"n":"Samsung Hub","a":"3 Church Street Singapore 049483","u":"#10-01.04","s":6000.0,"r":10.5,"g":63000.0},{"d":"River Valley","vt":false,"n":"Valley Point Office Tower","a":"491 River Valley Road Singapore 248371","u":"TBA","s":10366.0,"r":7.5,"g":77745.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Craig Road Shophouses","a":"42 Craig Road Singapore 089680","u":"42A #02-01","s":1360.0,"r":8.46,"g":11500.0},{"d":"CBD - Raffles Place","vt":false,"n":"Capital Square 3","a":"25 Church Street Singapore 049482","u":"#03-04","s":2799.0,"r":8.0,"g":22392.0},{"d":"CBD - Raffles Place","vt":false,"n":"Capital Square 3","a":"25 Church Street Singapore 049482","u":"#03-01","s":2960.0,"r":8.0,"g":23680.0},{"d":"CBD - Raffles Place","vt":false,"n":"Capital Square 3","a":"25 Church Street Singapore 049482","u":"#02-01A.B","s":2056.0,"r":8.0,"g":16448.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"ABI Plaza","a":"11 Keppel Road Singapore 089057","u":"#10-04","s":3622.0,"r":8.5,"g":30787.0},{"d":"CBD - Downtown","vt":false,"n":"One Raffles Quay South Tower","a":"1 Raffles Quay Singapore 048583","u":"#27-12","s":3240.0,"r":14.0,"g":45360.0},{"d":"CBD - Downtown","vt":false,"n":"One Raffles Quay North Tower","a":"1 Raffles Quay Singapore 048583","u":"#23-05","s":3574.0,"r":14.0,"g":50036.0},{"d":"CBD - Raffles Place","vt":true,"n":"Capital Square","a":"23 Church Street Singapore 049481","u":"#14-07.09","s":5641.0,"r":12.0,"g":67692.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"52 Tras Street Singapore 078991","u":"52 #02-01","s":1365.0,"r":8.35,"g":11397.75},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Tras Street Shophouses","a":"50 Tras Street Singapore 078989","u":"50A #03-02","s":575.0,"r":8.35,"g":4800.0},{"d":"CBD - Clarke Quay","vt":false,"n":"Hong Kong Street Buildings","a":"45 Hongkong Street Singapore 059683","u":"#05-01","s":985.0,"r":8.1,"g":7980.0},{"d":"Harbourfront","vt":false,"n":"Keppel Bay Tower","a":"1 Harbourfront Avenue Singapore 098632","u":"#16-03.04","s":4714.0,"r":9.0,"g":42426.0},{"d":"CBD - Clarke Quay","vt":false,"n":"Hong Kong Street Buildings","a":"45 Hongkong Street Singapore 059683","u":"#06-01","s":985.0,"r":8.1,"g":7980.0},{"d":"CBD - Downtown","vt":false,"n":"Asia Square Tower 1","a":"8 Marina View Singapore 018960","u":"TBA","s":2818.0,"r":14.0,"g":39452.0},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"587 Geylang Road Singapore 389526","u":"587B #03-01","s":726.0,"r":5.37,"g":3900.0},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#04-05","s":1421.0,"r":5.8,"g":8241.8},{"d":"CBD - Clarke Quay","vt":false,"n":"Hong Kong Street Buildings","a":"45 Hongkong Street Singapore 059683","u":"#04-01","s":1425.0,"r":8.1,"g":11545.0},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#05-05","s":1421.0,"r":5.8,"g":8241.8},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#05-05.06","s":2067.0,"r":5.8,"g":11988.6},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#05-06","s":646.0,"r":5.8,"g":3746.8},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#10-09","s":786.0,"r":5.8,"g":4558.8},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#11","s":9278.0,"r":5.8,"g":53812.4},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#12","s":9257.0,"r":5.8,"g":53690.6},{"d":"CBD - Shenton Way","vt":false,"n":"City House","a":"36 Robinson Road Singapore 068877","u":"#18","s":7535.0,"r":8.8,"g":66308.0},{"d":"East","vt":false,"n":"Geylang Road Shophouses","a":"587 Geylang Road Singapore 389526","u":"587A #02-01","s":712.0,"r":5.34,"g":3800.0},{"d":"CBD - Clarke Quay","vt":false,"n":"Hong Kong Street Buildings","a":"45 Hongkong Street Singapore 059683","u":"#03-01","s":1445.0,"r":8.1,"g":11705.0},{"d":"CBD - Raffles Place","vt":false,"n":"Republic Plaza 1","a":"9 Raffles Place Singapore 048619","u":"#60","s":9171.0,"r":11.0,"g":100881.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Three","a":"8 Temasek Boulevard Singapore 038988","u":"#08-04","s":3552.0,"r":11.0,"g":39072.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower One","a":"7 Temasek Boulevard Singapore 038987","u":"#13-01","s":6878.0,"r":11.0,"g":75658.0},{"d":"CBD - Clarke Quay","vt":false,"n":"The Central - Tower 1","a":"8 Eu Tong Sen Street Singapore 059818","u":"TBA","s":2659.0,"r":0.0,"g":0.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower One","a":"7 Temasek Boulevard Singapore 038987","u":"#26-06","s":957.0,"r":11.0,"g":10527.0},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#02-01","s":1378.0,"r":5.8,"g":7992.4},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Three","a":"8 Temasek Boulevard Singapore 038988","u":"#32-01A","s":1421.0,"r":11.0,"g":15631.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Three","a":"8 Temasek Boulevard Singapore 038988","u":"#16-01","s":2605.0,"r":11.0,"g":28655.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Three","a":"8 Temasek Boulevard Singapore 038988","u":"#24-01","s":3488.0,"r":11.0,"g":38368.0},{"d":"CBD - Raffles Place","vt":false,"n":"Bank of China Building","a":"4 Battery Road Singapore 049908","u":"#29-00","s":4198.0,"r":9.6,"g":40300.8},{"d":"CBD - Clarke Quay","vt":false,"n":"Hong Kong Street Buildings","a":"45 Hongkong Street Singapore 059683","u":"#02-01","s":1430.0,"r":8.1,"g":11585.0},{"d":"CBD - Raffles Place","vt":false,"n":"Bank of China Building","a":"4 Battery Road Singapore 049908","u":"#26-00","s":4198.0,"r":9.6,"g":40300.8},{"d":"CBD - Raffles Place","vt":false,"n":"Bank of China Building","a":"4 Battery Road Singapore 049908","u":"#25-00","s":4198.0,"r":9.6,"g":40300.8},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Two","a":"9 Temasek Boulevard Singapore 038989","u":"TBA","s":6351.0,"r":11.5,"g":73036.5},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Three","a":"8 Temasek Boulevard Singapore 038988","u":"#07-04","s":3671.0,"r":11.0,"g":40381.0},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#02-02","s":1389.0,"r":5.8,"g":8056.2},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#03","s":11905.0,"r":5.8,"g":69049.0},{"d":"Chinatown","vt":false,"n":"CES Centre","a":"171 Chin Swee Road Singapore 169877","u":"#04-02","s":1432.0,"r":5.8,"g":8305.6},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Anson House","a":"72 Anson Road Singapore 079911","u":"#06-02","s":1679.18,"r":9.5,"g":15952.21},{"d":"East","vt":false,"n":"ARC 380","a":"380 Jalan Besar Singapore 209000","u":"#13-05","s":1001.0,"r":7.8,"g":7807.8},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 2","a":"10 Marina Boulevard Singapore 018983","u":"#08-02","s":14469.0,"r":14.0,"g":202566.0},{"d":"East","vt":true,"n":"CPF Tampines Building","a":"1 Tampines Central 5 Singapore 529508","u":"#08-01","s":1560.78,"r":6.2,"g":9676.84},{"d":"CBD - Shenton Way","vt":false,"n":"Amoy Street Shophouses","a":"42 Amoy Street Singapore 069868","u":"42 #01","s":900.0,"r":10.89,"g":9800.0},{"d":"CBD - Shenton Way","vt":false,"n":"Tong Eng Building","a":"101 Cecil Street Singapore 069533","u":"#16-12A","s":460.0,"r":8.5,"g":3910.0},{"d":"Beach Road","vt":false,"n":"Sultan Plaza","a":"100 Jalan Sultan Singapore 199001","u":"#05-39","s":495.0,"r":3.33,"g":1650.0},{"d":"Beach Road","vt":false,"n":"Textile Centre","a":"200 Jalan Sultan Singapore 199018","u":"#12-02","s":883.0,"r":3.6,"g":3178.8},{"d":"One-North","vt":false,"n":"The Metropolis Tower 1","a":"9 North Buona Vista Drive Singapore 138588","u":"#09","s":29138.0,"r":9.2,"g":268069.6},{"d":"CBD - Downtown","vt":false,"n":"One Raffles Quay North Tower","a":"1 Raffles Quay Singapore 048583","u":"#21-01","s":2680.0,"r":14.0,"g":37520.0},{"d":"East","vt":false,"n":"CPF Tampines Building","a":"1 Tampines Central 5 Singapore 529508","u":"#08-04","s":1097.93,"r":6.2,"g":6807.17},{"d":"East","vt":false,"n":"CPF Tampines Building","a":"1 Tampines Central 5 Singapore 529508","u":"#08-03","s":1431.61,"r":6.2,"g":8875.98},{"d":"East","vt":false,"n":"CPF Tampines Building","a":"1 Tampines Central 5 Singapore 529508","u":"#06-11","s":1055.0,"r":6.2,"g":6541.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Four","a":"6 Temasek Boulevard Singapore 038986","u":"TBA","s":7416.0,"r":11.0,"g":81576.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 1","a":"8 Marina Boulevard Singapore 018981","u":"#04-01","s":13444.0,"r":14.0,"g":188216.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 1","a":"8 Marina Boulevard Singapore 018981","u":"#06-02","s":9397.0,"r":14.0,"g":131558.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 2","a":"10 Marina Boulevard Singapore 018983","u":"#24-02","s":3531.0,"r":14.0,"g":49434.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 2","a":"10 Marina Boulevard Singapore 018983","u":"#39-02","s":7528.0,"r":14.0,"g":105392.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Amara Corporate Tower","a":"165 Tanjong Pagar Road Singapore 088539","u":"#13-02","s":1033.0,"r":15.0,"g":15495.0},{"d":"CBD - Downtown","vt":false,"n":"Marina Bay Financial Centre Tower 3","a":"12 Marina Boulevard Singapore 018982","u":"TBA","s":15000.0,"r":14.0,"g":210000.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Amara Corporate Tower","a":"165 Tanjong Pagar Road Singapore 088539","u":"#11-01.02.03","s":4047.0,"r":10.0,"g":40470.0},{"d":"CBD - Tanjong Pagar","vt":false,"n":"Amara Corporate Tower","a":"165 Tanjong Pagar Road Singapore 088539","u":"#09-03","s":753.0,"r":15.0,"g":11295.0},{"d":"CBD - Shenton Way","vt":false,"n":"Amoy Street Shophouses","a":"43 Amoy Street Singapore 069869","u":"43A #02","s":1000.0,"r":6.5,"g":6500.0},{"d":"CBD - Raffles Place","vt":false,"n":"Capital Square 2","a":"21 Church Street Singapore 049480","u":"#03-01","s":2734.0,"r":8.0,"g":21872.0},{"d":"West","vt":false,"n":"CPF Jurong Building","a":"21 Jurong Gateway Road Singapore 608546","u":"#04-03","s":731.95,"r":5.8,"g":4245.31},{"d":"Beach Road","vt":false,"n":"Beach Road Shophouses","a":"707 North Bridge Road Singapore 198680","u":"707","s":2250.0,"r":6.22,"g":14000.0},{"d":"Beach Road","vt":false,"n":"Beach Road Shophouses","a":"705 North Bridge Road Singapore 198679","u":"705","s":2304.0,"r":6.29,"g":14500.0},{"d":"Orchard Road","vt":false,"n":"Tripleone Somerset","a":"111 Somerset Road Singapore 238164","u":"TBA","s":3412.0,"r":9.5,"g":32414.0},{"d":"CBD - Raffles Place","vt":true,"n":"Capital Square","a":"23 Church Street Singapore 049481","u":"#06-08","s":9774.0,"r":12.0,"g":117288.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Five","a":"5 Temasek Boulevard Singapore 038985","u":"#04-01A","s":1023.0,"r":11.0,"g":11253.0},{"d":"CBD - Promenade","vt":false,"n":"Suntec Tower Five","a":"5 Temasek Boulevard Singapore 038985","u":"#11-02","s":2443.0,"r":11.0,"g":26873.0},{"d":"CBD - Raffles Place","vt":true,"n":"Capital Square","a":"23 Church Street Singapore 049481","u":"#10-12.13","s":2616.0,"r":12.0,"g":31392.0},{"d":"Novena.Newton","vt":false,"n":"Novena Square Tower A","a":"238A Thomson Road Singapore 307684","u":"#12-08.10","s":4015.0,"r":9.5,"g":38142.5},{"d":"CBD - Raffles Place","vt":true,"n":"Capital Square","a":"23 Church Street Singapore 049481","u":"#10-01.06","s":14036.0,"r":12.0,"g":168432.0},{"d":"West","vt":false,"n":"CPF Jurong Building","a":"21 Jurong Gateway Road Singapore 608546","u":"#02-03","s":972.2,"r":5.8,"g":5638.76},{"d":"West","vt":false,"n":"CPF Jurong Building","a":"21 Jurong Gateway Road Singapore 608546","u":"#04-04","s":753.48,"r":5.8,"g":4370.18},{"d":"CBD - Clarke Quay","vt":false,"n":"Havelock II","a":"2 Havelock Road Singapore 059763","u":"#04-11","s":818.0,"r":8.0,"g":6544.0},{"d":"CBD - Clarke Quay","vt":false,"n":"Havelock II","a":"2 Havelock Road Singapore 059763","u":"#06-20","s":452.0,"r":8.0,"g":3616.0},{"d":"CBD - Clarke Quay","vt":false,"n":"Havelock II","a":"2 Havelock Road Singapore 059763","u":"#07-02","s":1593.0,"r":8.0,"g":12744.0}];
+
+const i18n = {
+  en: {
+    navTitle: "Senior Property Consultant",
+    navAbout: "About", navProperties: "Properties", navContact: "Contact", navWhatsapp: "WhatsApp",
+    heroEyebrow: "Singapore CBD Office Leasing",
+    heroH1: "Office space that's ready to work, the day you move in.",
+    heroSub: "I help businesses secure fitted CBD office space, cutting the time, capex, and guesswork out of leasing.",
+    heroCta1: "Browse Available Space", heroCta2: "Message on WhatsApp",
+    aboutEyebrow: "About Mary",
+    aboutH2: "Fitted space, without the guesswork.",
+    aboutP1: "With 17 years of experience in real estate, I understand that choosing an office is more than just comparing rental rates or browsing listings. The right office can support business growth, improve team productivity, strengthen company image, and reduce unnecessary setup costs.",
+    aboutP2: "My focus is on fitted and ready-to-move-in office spaces, especially for companies that want to avoid heavy renovation costs and shorten their setup timeline.",
+    aboutP3: "Whether you are setting up your first Singapore office, expanding into a larger space, or moving out of a serviced office, I can help you shortlist suitable fitted office options and make a more confident decision.",
+    chip1: "Growth-stage businesses", chip2: "Foreign entrants", chip3: "Regional offices", chip4: "SMEs", chip5: "Professional firms",
+    statYears: "Years in Real Estate", statListings: "Live Listings", statDistricts: "CBD Districts", statService: "Dedicated Service",
+    val1h: "Fitted, ready-to-move-in space", val1p: "Priority access to move-in-ready units, so you avoid heavy renovation costs and shorten your setup timeline.",
+    val2h: "Built for growing and overseas teams", val2p: "Practical, clear guidance for growth-stage businesses, foreign entrants, regional offices, SMEs and professional firms setting up in Singapore.",
+    val3h: "Advice beyond the listing", val3p: "Comparing locations, layouts, lease terms, total occupancy cost, move-in timelines and reinstatement, so the process is clearer, faster and less stressful.",
+    quoteText: "“I don't just show you space. I find you space that's ready to work.”",
+    quoteCite: "Mary Eve Lau, Senior Property Consultant",
+    propEyebrow: "Live Listings", propH2: "Explore available office space", propSub: "Search and filter listings across Singapore's CBD.",
+    searchPlaceholder: "Search by property name or address",
+    labelDistrict: "District", labelSize: "Size (sqft)", labelPrice: "Price ($/sqft)", labelSort: "Sort by",
+    sortDefault: "Relevance", sortPriceAsc: "Price: Low to High", sortPriceDesc: "Price: High to Low",
+    sortSizeAsc: "Size: Small to Large", sortSizeDesc: "Size: Large to Small",
+    allDistricts: "All districts",
+    loadMore: "Load more listings",
+    resultCount: (n, total) => n + " of " + total + " listings",
+    cardSize: "Size", cardRate: "Rate", cardGross: "Monthly", enquire: "Enquire on WhatsApp",
+    contactH2: "Let's find your next office", contactP: "Reach out directly, I respond fast.",
+    cbWhatsapp: "WhatsApp Me", cbLinkedin: "LinkedIn", cbInstagram: "Instagram",
+    footerText: "© 2026 Mary Eve Lau · Senior Property Consultant, Citi Commercial",
+    waHeroText: "Hi Mary, I'd like to know more about fitted office space options in the CBD.",
+    waEnquireText: (name, unit, addr, size) => "Hi Mary, I'm interested in " + name + " (" + unit + "), " + addr + " — " + size + " sqft. Could you share more details?"
+  },
+  zh: {
+    navTitle: "高级物业顾问",
+    navAbout: "关于我", navProperties: "房源", navContact: "联系方式", navWhatsapp: "WhatsApp",
+    heroEyebrow: "新加坡中央商务区办公室租赁",
+    heroH1: "拎包即用的办公空间，入驻即营业。",
+    heroSub: "专注甄选装修完善的中央商务区办公空间，为企业节省时间与装修成本，让搬迁更省心。",
+    heroCta1: "浏览房源", heroCta2: "WhatsApp 联系我",
+    aboutEyebrow: "关于我",
+    aboutH2: "拎包入驻，省心省力。",
+    aboutP1: "拥有17年房地产行业经验，我深知选择办公室不仅仅是比较租金或浏览房源那么简单。合适的办公室能够支持企业发展、提升团队效率、强化企业形象，并减少不必要的装修支出。",
+    aboutP2: "我专注于装修完善、可直接入驻的办公空间，尤其适合希望避免高额装修成本、缩短筹备周期的企业。",
+    aboutP3: "无论您是首次在新加坡设立办公室、扩展至更大空间，还是从服务式办公室搬出，我都能协助您筛选合适的装修办公空间，做出更有信心的决定。",
+    chip1: "成长型企业", chip2: "海外进驻企业", chip3: "区域办事处", chip4: "中小企业", chip5: "专业服务机构",
+    statYears: "年房地产经验", statListings: "实时房源", statDistricts: "商务区数量", statService: "一对一专属服务",
+    val1h: "装修完善，拎包入驻", val1p: "优先获取拎包入驻单位资讯，助您避免高额装修支出，缩短筹备周期。",
+    val2h: "专为成长型与海外企业打造", val2p: "为成长型企业、海外进驻公司、区域办事处、中小企业及专业服务机构提供实用的租赁指导。",
+    val3h: "房源之外的专业建议", val3p: "从地段、格局到租赁条款、总体使用成本、入驻时间与恢复原状，全程为您提供清晰指导。",
+    quoteText: "“我不只是带您看空间，我为您找到拎包即可投入使用的空间。”",
+    quoteCite: "Mary Eve Lau · 高级物业顾问",
+    propEyebrow: "实时房源", propH2: "浏览可租办公空间", propSub: "搜索并筛选新加坡中央商务区的实时房源。",
+    searchPlaceholder: "按物业名称或地址搜索",
+    labelDistrict: "地区", labelSize: "面积（平方英尺）", labelPrice: "价格（元/平方英尺）", labelSort: "排序方式",
+    sortDefault: "默认排序", sortPriceAsc: "价格：从低到高", sortPriceDesc: "价格：从高到低",
+    sortSizeAsc: "面积：从小到大", sortSizeDesc: "面积：从大到小",
+    allDistricts: "所有地区",
+    loadMore: "加载更多房源",
+    resultCount: (n, total) => "共 " + total + " 个房源，显示 " + n + " 个",
+    cardSize: "面积", cardRate: "租金单价", cardGross: "月租金", enquire: "WhatsApp 咨询",
+    contactH2: "为您寻找理想办公空间", contactP: "欢迎直接联系我，我会尽快回复。",
+    cbWhatsapp: "WhatsApp 联系", cbLinkedin: "领英 LinkedIn", cbInstagram: "Instagram",
+    footerText: "© 2026 Mary Eve Lau · Citi Commercial 高级物业顾问",
+    waHeroText: "你好 Mary，我想了解中央商务区装修办公室的选择。",
+    waEnquireText: (name, unit, addr, size) => "你好 Mary，我对 " + name + "（" + unit + "），" + addr + "，面积 " + size + " 平方英尺，感兴趣，可以提供更多详情吗？"
+  }
+};
+
+let lang = "en";
+let page = 1;
+const pageSize = 12;
+
+function t(key) { return i18n[lang][key]; }
+
+function applyStaticText() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const val = i18n[lang][key];
+    if (typeof val === "string") el.textContent = val;
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.placeholder = i18n[lang][key];
+  });
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.getElementById("langEn").classList.toggle("active", lang === "en");
+  document.getElementById("langZh").classList.toggle("active", lang === "zh");
+
+  const waHeroUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t("waHeroText")).replace(/'/g, "%27");
+  document.getElementById("waHero").href = waHeroUrl;
+  document.getElementById("waNav").href = waHeroUrl;
+  document.getElementById("waContact").href = waHeroUrl;
+}
+
+document.getElementById("langEn").addEventListener("click", () => { lang = "en"; applyStaticText(); renderDistricts(); renderListings(); });
+document.getElementById("langZh").addEventListener("click", () => { lang = "zh"; applyStaticText(); renderDistricts(); renderListings(); });
+
+function renderDistricts() {
+  const sel = document.getElementById("district");
+  const current = sel.value || "";
+  const districts = [...new Set(listings.map(x => x.d))].sort();
+  sel.innerHTML = "";
+  const optAll = document.createElement("option");
+  optAll.value = "";
+  optAll.textContent = t("allDistricts");
+  sel.appendChild(optAll);
+  districts.forEach(d => {
+    const o = document.createElement("option");
+    o.value = d; o.textContent = d;
+    sel.appendChild(o);
+  });
+  sel.value = current;
+}
+
+const fmt = n => n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+
+function getFiltered() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const district = document.getElementById("district").value;
+  const sMin = parseFloat(document.getElementById("sizeMin").value);
+  const sMax = parseFloat(document.getElementById("sizeMax").value);
+  const pMin = parseFloat(document.getElementById("priceMin").value);
+  const pMax = parseFloat(document.getElementById("priceMax").value);
+  const sort = document.getElementById("sort").value;
+
+  let filtered = listings.filter(x => {
+    if (q && !(x.n.toLowerCase().includes(q) || x.a.toLowerCase().includes(q))) return false;
+    if (district && x.d !== district) return false;
+    if (!isNaN(sMin) && x.s < sMin) return false;
+    if (!isNaN(sMax) && x.s > sMax) return false;
+    if (!isNaN(pMin) && x.r < pMin) return false;
+    if (!isNaN(pMax) && x.r > pMax) return false;
+    return true;
+  });
+
+  if (sort === "price_asc") filtered.sort((a,b) => a.r - b.r);
+  else if (sort === "price_desc") filtered.sort((a,b) => b.r - a.r);
+  else if (sort === "size_asc") filtered.sort((a,b) => a.s - b.s);
+  else if (sort === "size_desc") filtered.sort((a,b) => b.s - a.s);
+
+  return filtered;
+}
+
+function renderListings() {
+  const filtered = getFiltered();
+  const shown = filtered.slice(0, page * pageSize);
+  const grid = document.getElementById("listingGrid");
+  grid.innerHTML = "";
+  shown.forEach(x => {
+    const card = document.createElement("div");
+    card.className = "listing-card";
+    const waMsg = t("waEnquireText")(x.n, x.u, x.a, fmt(x.s));
+    const waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(waMsg).replace(/'/g, "%27");
+    card.innerHTML =
+      "<span class='badge'>" + x.d + "</span>" +
+      "<h4>" + x.n + "</h4>" +
+      "<div class='addr'>" + x.a + " &middot; " + x.u + "</div>" +
+      "<div class='specs'>" +
+        "<div><span>" + t("cardSize") + "</span>" + fmt(x.s) + " sqft</div>" +
+        "<div><span>" + t("cardRate") + "</span>$" + x.r.toFixed(2) + "</div>" +
+        "<div><span>" + t("cardGross") + "</span>$" + fmt(x.g) + "</div>" +
+      "</div>" +
+      "<a class=\"enquire\" href=\"" + waUrl + "\" target=\"_blank\" rel=\"noopener\">" + t("enquire") + "</a>";
+    grid.appendChild(card);
+  });
+  document.getElementById("resultCount").textContent = t("resultCount")(shown.length, filtered.length);
+  document.getElementById("loadMore").classList.toggle("hidden", shown.length >= filtered.length);
+}
+
+document.getElementById("loadMore").addEventListener("click", () => { page++; renderListings(); });
+["q","district","sizeMin","sizeMax","priceMin","priceMax","sort"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => { page = 1; renderListings(); });
+  document.getElementById(id).addEventListener("change", () => { page = 1; renderListings(); });
+});
+
+renderDistricts();
+applyStaticText();
+renderListings();
+</script>
+</body>
+</html>
