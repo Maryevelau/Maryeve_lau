@@ -69,7 +69,6 @@ CBD - Tanjong Pagar,No,78 Shenton Way Tower 1,78 Shenton Way Singapore 079120,Of
 Bukit Timah Road,No,Boon Siew Building,75 Bukit Timah Road Singapore 229833,Office,#05-15.16,1158.00,5.50,6369.00
 Bukit Timah Road,No,Boon Siew Building,75 Bukit Timah Road Singapore 229833,Office,#05-25,316.00,5.50,1738.00
 CBD - Tanjong Pagar,No,78 Shenton Way Tower 1,78 Shenton Way Singapore 079120,Office,#16-04,1475.00,8.50,12537.50
-East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#06-06,484.00,3.80,1839.20
 CBD - Tanjong Pagar,No,Craig Road Shophouses,48 Craig Road Singapore 089686,Office,48,5500.00,0.00,0.00
 CBD - Tanjong Pagar,No,Duxton Road Shophouses,13 Duxton Hill Singapore 089597,Office,13 #02,1100.00,7.27,8000.00
 CBD - Tanjong Pagar,No,Tras Street Shophouses,76 Tras Street Singapore 079015,Office,76A #02,1700.00,8.53,14500.00
@@ -82,10 +81,8 @@ Harbourfront,No,Mapletree Business City - Block 10,10 Pasir Panjang Road Singapo
 Harbourfront,No,Mapletree Business City - Block 10,10 Pasir Panjang Road Singapore 117438,Office,#18-01.02,26668.00,7.50,200010.00
 North,No,Admirax,8 Admiralty Street Singapore 757438,Office,#04-10,17652.96,2.50,44132.40
 Bukit Timah Road,Yes,Boon Siew Building,75 Bukit Timah Road Singapore 229833,Office,#06-14,970.00,5.70,5529.00
-East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#05-21,441.00,3.80,1675.80
 East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#05-01,1012.00,3.80,3845.60
 CBD - City Hall,Yes,Singapore Chinese Chamber of Commerce and Industry Building,47 Hill Street Singapore 179365,Office,#07-02,3185.00,8.50,27072.50
-East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#01-77,409.00,3.80,1554.20
 CBD - Raffles Place,No,6 Battery Road,6 Battery Road Singapore 049909,Office,#11-01,1615.00,13.50,21802.50
 CBD - City Hall,No,Odeon Towers,331 North Bridge Road Singapore 188720,Office,#11-02,1735.00,9.00,15615.00
 CBD - City Hall,Yes,Odeon Towers,331 North Bridge Road Singapore 188720,Office,#05-01.02,2303.00,9.00,20727.00
@@ -449,3 +446,6 @@ West,No,CPF Jurong Building,21 Jurong Gateway Road Singapore 608546,Office,#04-0
 CBD - Clarke Quay,No,Havelock II,2 Havelock Road Singapore 059763,Office,#04-11,818.00,8.00,6544.00
 CBD - Clarke Quay,No,Havelock II,2 Havelock Road Singapore 059763,Office,#06-20,452.00,8.00,3616.00
 CBD - Clarke Quay,No,Havelock II,2 Havelock Road Singapore 059763,Office,#07-02,1593.00,8.00,12744.00
+CBD - Raffles Place,No,The Arcade,11 Collyer Quay Singapore 049317,Office,#12-01,2960.00,7.50,22200.00
+East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#05-03,441.00,3.80,1675.80
+East,No,Katong Shopping Centre,865 Mountbatten Road Singapore 437844,Office,#05-41,517.00,3.80,1964.60
